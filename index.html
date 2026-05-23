@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dineo Fast Food & Cafe Lounge Multan | Where Taste Meets Comfort</title>
+  <meta name="description" content="Dineo Fast Food & Cafe Lounge – Multan's favourite spot for burgers, shakes, desi comfort food and late-night bites. Order online at dineo.pk or call 0301-6394444."/>
+  <meta name="keywords" content="Dineo Multan, fast food Multan, cafe lounge Multan, burger Multan, best restaurant Multan, order food online Multan, Emirates Mall restaurant"/>
+  <meta property="og:title" content="Dineo Fast Food & Cafe Lounge | Multan"/>
+  <meta property="og:description" content="Where Taste Meets Comfort — Multan's favourite fast food cafe. Open 11 AM – 3 AM."/>
+  <meta name="theme-color" content="#E8C900"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,700&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       VARIABLES & RESET
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --yellow:      #E8C900;
+      --yellow-deep: #c9ab00;
+      --yellow-pale: #FFF8CC;
+      --dark:        #141414;
+      --dark2:       #1E1E1E;
+      --card-bg:     #242424;
+      --ink:         #0D0D0D;
+      --charcoal:    #333333;
+      --smoke:       #888888;
+      --offwhite:    #F7F7F7;
+      --white:       #FFFFFF;
+      --red:         #E84040;
+      --font: 'Poppins', sans-serif;
+      --serif: 'Playfair Display', serif;
+    }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background: var(--dark);
+      color: var(--offwhite);
+      font-family: var(--font);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { display: block; max-width: 100%; }
+    ::selection { background: var(--yellow); color: var(--dark); }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       SCROLLBAR
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--dark2); }
+    ::-webkit-scrollbar-thumb { background: var(--yellow); border-radius: 3px; }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       TOP ANNOUNCEMENT BAR
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .topbar {
+      background: var(--yellow);
+      color: var(--dark);
+      text-align: center;
+      padding: .5rem 5%;
+      font-size: .73rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+    }
+    .topbar a { color: var(--dark); font-weight: 700; border-bottom: 1px solid var(--dark); }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       NAVBAR
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    #navbar {
+      position: fixed; top: 36px; left: 0; width: 100%; z-index: 1000;
+      padding: 1rem 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background .4s, top .4s, box-shadow .4s;
+    }
+    #navbar.scrolled {
+      top: 0;
+      background: rgba(14,14,14,.97);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 2px 20px rgba(0,0,0,.5);
+      border-bottom: 1px solid rgba(232,201,0,.15);
+    }
+
+    .nav-logo {
+      display: flex; align-items: center; gap: .6rem;
+    }
+    .logo-box {
+      width: 40px; height: 40px;
+      background: var(--yellow);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+    }
+    .logo-text {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: .02em;
+    }
+    .logo-text span { color: var(--yellow); }
+
+    .nav-links {
+      display: flex; gap: 2rem; align-items: center;
+    }
+    .nav-links a {
+      font-size: .8rem; font-weight: 500;
+      letter-spacing: .08em; text-transform: uppercase;
+      color: rgba(255,255,255,.7);
+      transition: color .3s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute; bottom: -3px; left: 0;
+      width: 0; height: 2px;
+      background: var(--yellow);
+      transition: width .3s;
+    }
+    .nav-links a:hover { color: var(--yellow); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-order {
+      background: var(--yellow) !important;
+      color: var(--dark) !important;
+      padding: .5rem 1.3rem; border-radius: 4px;
+      font-weight: 700 !important;
+      transition: background .3s !important;
+    }
+    .nav-order:hover { background: var(--yellow-deep) !important; }
+    .nav-order::after { display: none !important; }
+
+    /* Hamburger */
+    .ham {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; background: none; border: none; padding: .4rem;
+    }
+    .ham span {
+      display: block; width: 26px; height: 2px;
+      background: var(--yellow); transition: .3s;
+    }
+    .ham.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .ham.open span:nth-child(2) { opacity: 0; }
+    .ham.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+    .mob-nav {
+      display: none; flex-direction: column;
+      position: fixed; inset: 0; z-index: 999;
+      background: var(--ink);
+      align-items: center; justify-content: center; gap: 2.5rem;
+    }
+    .mob-nav.open { display: flex; }
+    .mob-nav a {
+      font-size: 2rem; font-weight: 700;
+      color: var(--offwhite); letter-spacing: .04em; transition: color .3s;
+    }
+    .mob-nav a:hover { color: var(--yellow); }
+    .mob-close {
+      position: absolute; top: 1.5rem; right: 5%;
+      background: none; border: none; color: var(--yellow);
+      font-size: 2.2rem; cursor: pointer;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       TYPOGRAPHY HELPERS
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .eyebrow {
+      font-size: .72rem; font-weight: 600;
+      letter-spacing: .25em; text-transform: uppercase;
+      color: var(--yellow);
+    }
+    .section-title {
+      font-family: var(--font);
+      font-size: clamp(1.9rem, 4.5vw, 3rem);
+      font-weight: 800; line-height: 1.15; color: var(--white);
+    }
+    .section-title .accent { color: var(--yellow); }
+    .section-title .italic { font-family: var(--serif); font-weight: 700; font-style: italic; }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       BUTTONS
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .85rem 2rem; border-radius: 6px;
+      font-family: var(--font); font-size: .82rem;
+      font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      border: 2px solid transparent;
+      transition: transform .25s, background .3s, box-shadow .3s;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-3px); }
+    .btn-yellow {
+      background: var(--yellow); color: var(--dark);
+      box-shadow: 0 6px 22px rgba(232,201,0,.35);
+    }
+    .btn-yellow:hover { background: var(--yellow-deep); box-shadow: 0 10px 30px rgba(232,201,0,.45); }
+    .btn-outline {
+      background: transparent; color: var(--yellow);
+      border-color: rgba(232,201,0,.5);
+    }
+    .btn-outline:hover { background: rgba(232,201,0,.08); border-color: var(--yellow); }
+    .btn-white {
+      background: var(--white); color: var(--dark);
+    }
+    .btn-white:hover { background: var(--offwhite); }
+    .btn-wa {
+      background: #25D366; color: var(--white); border-color: #25D366;
+      box-shadow: 0 6px 22px rgba(37,211,102,.3);
+    }
+    .btn-wa:hover { background: #1ebe5b; box-shadow: 0 10px 28px rgba(37,211,102,.4); }
+    .btn-red {
+      background: var(--red); color: var(--white);
+      box-shadow: 0 6px 22px rgba(232,64,64,.25);
+    }
+    .btn-red:hover { background: #c93333; }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       SECTION WRAPPER
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .section { padding: 5.5rem 5%; }
+    .container { max-width: 1180px; margin: 0 auto; }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       HERO
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    #hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center; overflow: hidden;
+      background: var(--ink);
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(100deg, rgba(13,13,13,.95) 40%, rgba(13,13,13,.55) 80%),
+        url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1800&q=85');
+      background-size: cover; background-position: center right;
+      animation: heroIn 12s ease forwards;
+    }
+    @keyframes heroIn { from { transform: scale(1.08); } to { transform: scale(1); } }
+
+    /* Animated dots pattern */
+    .hero-dots {
+      position: absolute; inset: 0; z-index: 1;
+      background-image: radial-gradient(circle, rgba(232,201,0,.06) 1px, transparent 0);
+      background-size: 30px 30px;
+      pointer-events: none;
+    }
+
+    /* Glow blob */
+    .hero-glow {
+      position: absolute; top: 20%; right: 10%;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,201,0,.12) 0%, transparent 70%);
+      pointer-events: none; z-index: 1;
+    }
+
+    .hero-content {
+      position: relative; z-index: 2;
+      padding: 8rem 5% 5rem;
+      max-width: 700px;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .6rem;
+      background: rgba(232,201,0,.12);
+      border: 1px solid rgba(232,201,0,.3);
+      padding: .4rem 1rem; border-radius: 100px;
+      font-size: .72rem; font-weight: 600; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--yellow);
+      margin-bottom: 1.5rem;
+      animation: fadeUp .8s .2s both;
+    }
+    .hero-badge .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--yellow);
+      animation: blink 1.5s infinite;
+    }
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+
+    .hero-title {
+      font-size: clamp(2.8rem, 7.5vw, 5.5rem);
+      font-weight: 800; line-height: 1.04; color: var(--white);
+      margin-bottom: 1rem;
+    }
+    .hero-title .w1 { animation: fadeUp .9s .35s both; display: block; }
+    .hero-title .w2 {
+      animation: fadeUp .9s .5s both; display: block;
+      color: var(--yellow); font-family: var(--serif); font-style: italic;
+    }
+    .hero-title .w3 { animation: fadeUp .9s .65s both; display: block; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-desc {
+      font-size: clamp(.88rem, 1.5vw, 1.05rem);
+      color: rgba(255,255,255,.6);
+      max-width: 520px; margin-bottom: 2.8rem;
+      animation: fadeUp .9s .8s both;
+    }
+    .hero-btns {
+      display: flex; flex-wrap: wrap; gap: 1rem;
+      animation: fadeUp .9s .95s both;
+    }
+    .hero-trust {
+      display: flex; align-items: center; gap: 1.5rem;
+      margin-top: 3rem;
+      animation: fadeUp .9s 1.1s both;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: .5rem;
+      font-size: .8rem; color: rgba(255,255,255,.5);
+    }
+    .trust-item .ti { font-size: 1.1rem; }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       STATS STRIP
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .stats-strip {
+      background: var(--yellow);
+      padding: 2rem 5%;
+    }
+    .stats-inner {
+      max-width: 1180px; margin: 0 auto;
+      display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem;
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-size: 2.2rem; font-weight: 800;
+      color: var(--dark); line-height: 1;
+    }
+    .stat-label {
+      font-size: .7rem; font-weight: 600; letter-spacing: .12em;
+      text-transform: uppercase; color: rgba(0,0,0,.55);
+      margin-top: .2rem;
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       ABOUT
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    #about { background: var(--dark2); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: center;
+    }
+    .about-images { position: relative; }
+    .about-img-main {
+      width: 100%; height: 520px; object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 30px 70px rgba(0,0,0,.5);
+      transition: transform .5s; display: block;
+    }
+    .about-img-main:hover { transform: scale(1.02); }
+    .about-img-float {
+      position: absolute; bottom: -1.5rem; right: -1.5rem;
+      width: 170px; height: 170px; object-fit: cover;
+      border-radius: 10px;
+      border: 5px solid var(--dark2);
+      box-shadow: 0 12px 40px rgba(0,0,0,.4);
+    }
+    .about-yellow-bar {
+      position: absolute; top: 2rem; left: -1rem;
+      width: 5px; height: 70px;
+      background: var(--yellow); border-radius: 3px;
+    }
+    .about-text .eyebrow { margin-bottom: .9rem; }
+    .about-text .section-title { margin-bottom: 1.6rem; }
+    .about-text p {
+      font-size: .93rem; color: rgba(255,255,255,.55);
+      margin-bottom: 1.1rem;
+    }
+    .about-text p strong { color: var(--offwhite); }
+    .about-tags {
+      display: flex; gap: .7rem; flex-wrap: wrap; margin: 1.5rem 0;
+    }
+    .tag {
+      padding: .35rem .9rem; border-radius: 100px;
+      font-size: .72rem; font-weight: 600; letter-spacing: .08em;
+      text-transform: uppercase;
+      background: rgba(232,201,0,.1);
+      border: 1px solid rgba(232,201,0,.25);
+      color: var(--yellow);
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       MENU
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    #menu { background: var(--dark); }
+    .menu-header { text-align: center; max-width: 600px; margin: 0 auto 3.5rem; }
+    .menu-header .eyebrow { margin-bottom: .8rem; }
+    .menu-header p { font-size: .9rem; color: rgba(255,255,255,.45); margin-top: .8rem; }
+
+    .menu-tabs {
+      display: flex; justify-content: center; gap: .5rem;
+      flex-wrap: wrap; margin-bottom: 3rem;
+    }
+    .tab {
+      padding: .55rem 1.5rem; border-radius: 100px;
+      border: 1.5px solid rgba(232,201,0,.25);
+      background: transparent; font-family: var(--font);
+      font-size: .74rem; font-weight: 600; letter-spacing: .1em;
+      text-transform: uppercase; color: rgba(255,255,255,.5);
+      cursor: pointer; transition: .3s;
+    }
+    .tab.active, .tab:hover {
+      background: var(--yellow); border-color: var(--yellow);
+      color: var(--dark);
+    }
+
+    .menu-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1.5rem;
+    }
+    /* ── 3D menu card ── */
+    .menu-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 12px; overflow: hidden;
+      transition: transform .35s cubic-bezier(.25,.46,.45,.94),
+                  box-shadow .35s, border-color .3s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+    .menu-card:hover {
+      transform: translateY(-8px) rotateX(3deg) rotateY(-2deg);
+      box-shadow: 0 24px 60px rgba(0,0,0,.6), 0 0 0 1px rgba(232,201,0,.2);
+      border-color: rgba(232,201,0,.3);
+    }
+    .menu-card-img-wrap { overflow: hidden; position: relative; }
+    .menu-card img {
+      width: 100%; height: 200px; object-fit: cover;
+      transition: transform .5s;
+    }
+    .menu-card:hover img { transform: scale(1.08); }
+    .card-badge {
+      position: absolute; top: .8rem; left: .8rem;
+      background: var(--yellow); color: var(--dark);
+      font-size: .65rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; padding: .25rem .7rem;
+      border-radius: 100px;
+    }
+    .card-badge.new { background: var(--red); color: var(--white); }
+    .menu-card-body { padding: 1.3rem 1.4rem 1.6rem; }
+    .card-name {
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--white); margin-bottom: .3rem;
+    }
+    .card-desc {
+      font-size: .82rem; color: rgba(255,255,255,.42);
+      margin-bottom: 1rem; line-height: 1.6;
+    }
+    .card-footer {
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .card-price {
+      font-size: 1.2rem; font-weight: 800; color: var(--yellow);
+    }
+    .card-add {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--yellow); border: none;
+      color: var(--dark); font-size: 1.3rem; font-weight: 700;
+      cursor: pointer; transition: background .3s, transform .2s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .card-add:hover { background: var(--yellow-deep); transform: scale(1.15); }
+
+    .menu-panel { display: none; }
+    .menu-panel.active { display: block; }
+
+    .menu-cta { text-align: center; margin-top: 3rem; }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       3D EXPERIENCE / AMBIANCE
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    #experience { background: var(--dark2); overflow: hidden; }
+    .exp-header { text-align: center; margin-bottom: 3.5rem; }
+    .exp-header p { font-size: .9rem; color: rgba(255,255,255,.45); margin-top: .8rem; max-width: 540px; margin-left: auto; margin-right: auto; }
+
+    .scene { perspective: 1000px; }
+    .cards-3d {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+    }
+    .c3d {
+      position: relative; border-radius: 12px; overflow: hidden;
+      transform-style: preserve-3d;
+      transition: transform .4s cubic-bezier(.25,.46,.45,.94), box-shadow .4s;
+      box-shadow: 0 10px 35px rgba(0,0,0,.4);
+      cursor: pointer;
+    }
+    .c3d:hover {
+      transform: rotateX(-8deg) rotateY(5deg) translateZ(20px) scale(1.04);
+      box-shadow: 0 28px 65px rgba(0,0,0,.6);
+    }
+    .c3d:nth-child(2):hover { transform: rotateX(-5deg) rotateY(0) translateZ(25px) scale(1.05); }
+    .c3d:nth-child(3):hover { transform: rotateX(-8deg) rotateY(-5deg) translateZ(20px) scale(1.04); }
+    .c3d img { width: 100%; height: 300px; object-fit: cover; display: block; }
+    .c3d-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(13,13,13,.88) 0%, transparent 50%);
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 1.4rem;
+    }
+    .c3d-title {
+      font-size: 1.2rem; font-weight: 700; color: var(--white); margin-bottom: .2rem;
+    }
+    .c3d-sub {
+      font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--yellow);
+    }
+    /* Yellow shine on hover */
+    .c3d::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(232,201,0,.15) 0%, transparent 60%);
+      opacity: 0; transition: opacity .4s; pointer-events: none;
+    }
+    .c3d:hover::after { opacity: 1; }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       SERVICES
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    #services { background: var(--dark); }
+    .services-header { text-align: center; margin-bottom: 3.5rem; }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 12px; padding: 2rem 1.7rem;
+      transition: transform .3s, box-shadow .3s, border-color .3s;
+      position: relative; overflow: hidden;
+    }
+    .service-card::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0;
+      width: 0; height: 3px;
+      background: var(--yellow);
+      transition: width .4s;
+      border-radius: 0 0 3px 3px;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px rgba(0,0,0,.35);
+      border-color: rgba(232,201,0,.2);
+    }
+    .service-card:hover::after { width: 100%; }
+    .s-icon { font-size: 2.2rem; margin-bottom: 1rem; display: block; }
+    .service-card h3 {
+      font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: .5rem;
+    }
+    .service-card p { font-size: .84rem; color: rgba(255,255,255,.45); line-height: 1.7; }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       SPECIAL OFFER BANNER
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .offer-banner {
+      background: linear-gradient(135deg, var(--yellow) 0%, #f5d800 50%, #e8b800 100%);
+      padding: 4rem 5%; text-align: center; position: relative; overflow: hidden;
+    }
+    .offer-banner::before {
+      content: '🍔';
+      position: absolute; font-size: 12rem; opacity: .07;
+      right: -2rem; top: 50%; transform: translateY(-50%);
+    }
+    .offer-banner::after {
+      content: '🍟';
+      position: absolute; font-size: 10rem; opacity: .07;
+      left: -1rem; top: 50%; transform: translateY(-50%);
+    }
+    .offer-banner h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800;
+      color: var(--dark); margin-bottom: .5rem;
+    }
+    .offer-banner p { color: rgba(0,0,0,.65); font-size: .95rem; margin-bottom: 2rem; }
+    .offer-banner .btn { position: relative; z-index: 1; }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       TESTIMONIALS
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    #reviews { background: var(--dark2); }
+    .reviews-header { text-align: center; margin-bottom: 3rem; }
+    .reviews-header p { font-size: .9rem; color: rgba(255,255,255,.45); margin-top: .8rem; }
+    .reviews-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1.5rem;
+    }
+    .review-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 12px; padding: 1.8rem;
+      transition: transform .3s, box-shadow .3s;
+    }
+    .review-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,.4); }
+    .stars { color: var(--yellow); font-size: .95rem; margin-bottom: .8rem; }
+    .review-text {
+      font-size: .88rem; color: rgba(255,255,255,.6);
+      font-style: italic; line-height: 1.75; margin-bottom: 1.2rem;
+    }
+    .review-author { font-size: .75rem; font-weight: 600; color: var(--yellow); letter-spacing: .08em; }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       GALLERY STRIP
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .gallery-strip { overflow: hidden; background: var(--ink); padding: 0; }
+    .strip-row {
+      display: flex; gap: .7rem;
+      animation: stripLeft 28s linear infinite;
+      width: max-content;
+    }
+    .strip-row.reverse {
+      animation: stripRight 32s linear infinite;
+    }
+    .strip-row:hover { animation-play-state: paused; }
+    @keyframes stripLeft  { from { transform: translateX(0); }    to { transform: translateX(-50%); } }
+    @keyframes stripRight { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+    .strip-row img {
+      width: 240px; height: 170px; object-fit: cover; flex-shrink: 0;
+      border-radius: 6px; transition: transform .3s, filter .3s;
+      filter: brightness(.85) saturate(.9);
+    }
+    .strip-row img:hover { transform: scale(1.05); filter: brightness(1) saturate(1.1); }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       CONTACT
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    #contact { background: var(--dark); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.3fr;
+      gap: 5rem; align-items: start;
+    }
+    .contact-info .eyebrow { margin-bottom: .9rem; }
+    .contact-info .section-title { margin-bottom: 1.4rem; }
+    .contact-info > p { font-size: .93rem; color: rgba(255,255,255,.45); margin-bottom: 2rem; }
+    .ci-list { display: flex; flex-direction: column; gap: 1.2rem; }
+    .ci {
+      display: flex; align-items: flex-start; gap: 1rem;
+    }
+    .ci-icon {
+      width: 2.5rem; height: 2.5rem; border-radius: 8px;
+      background: rgba(232,201,0,.12);
+      border: 1px solid rgba(232,201,0,.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .ci-body .ci-label {
+      font-size: .65rem; font-weight: 600; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--yellow); margin-bottom: .12rem;
+    }
+    .ci-body a, .ci-body span {
+      font-size: .88rem; color: rgba(255,255,255,.7);
+    }
+    .ci-body a:hover { color: var(--yellow); }
+    .contact-social { display: flex; gap: .7rem; margin-top: 2rem; }
+    .cs {
+      width: 2.6rem; height: 2.6rem; border-radius: 8px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; transition: background .3s, transform .2s;
+      text-decoration: none;
+    }
+    .cs:hover { background: var(--yellow); transform: translateY(-3px); }
+
+    /* booking form */
+    .booking-form {
+      background: var(--card-bg);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 14px; padding: 2.4rem 2rem;
+      border-top: 3px solid var(--yellow);
+    }
+    .booking-form h3 {
+      font-size: 1.5rem; font-weight: 700; color: var(--white);
+      margin-bottom: 1.6rem;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .fg { margin-bottom: 1rem; }
+    .fg label {
+      display: block; font-size: .68rem; font-weight: 600;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: rgba(255,255,255,.45); margin-bottom: .4rem;
+    }
+    .fg input, .fg select, .fg textarea {
+      width: 100%; padding: .75rem 1rem;
+      background: rgba(255,255,255,.05);
+      border: 1.5px solid rgba(255,255,255,.08);
+      border-radius: 6px;
+      font-family: var(--font); font-size: .86rem;
+      color: var(--white); outline: none; transition: border-color .3s;
+    }
+    .fg input:focus, .fg select:focus, .fg textarea:focus {
+      border-color: var(--yellow); background: rgba(232,201,0,.05);
+    }
+    .fg input::placeholder, .fg textarea::placeholder { color: rgba(255,255,255,.25); }
+    .fg select option { background: var(--dark2); }
+    .fg textarea { resize: vertical; min-height: 85px; }
+    .form-btn {
+      width: 100%; padding: .95rem;
+      background: var(--yellow); color: var(--dark);
+      border: none; border-radius: 6px;
+      font-family: var(--font); font-size: .8rem;
+      font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
+      cursor: pointer; transition: background .3s, transform .2s;
+    }
+    .form-btn:hover { background: var(--yellow-deep); transform: translateY(-2px); }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       MAP
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    #mapbox { height: 380px; position: relative; }
+    #mapbox iframe { width: 100%; height: 100%; border: none; filter: invert(.85) hue-rotate(180deg) saturate(.8); }
+    .map-info {
+      position: absolute; top: 50%; right: 6%;
+      transform: translateY(-50%);
+      background: var(--card-bg);
+      border: 1px solid rgba(232,201,0,.2);
+      border-left: 4px solid var(--yellow);
+      border-radius: 10px; padding: 1.6rem 1.8rem;
+      box-shadow: 0 12px 40px rgba(0,0,0,.5);
+      max-width: 260px;
+    }
+    .map-info h4 { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: .4rem; }
+    .map-info p { font-size: .8rem; color: rgba(255,255,255,.5); line-height: 1.55; }
+    .map-info a {
+      display: inline-block; margin-top: .8rem;
+      font-size: .72rem; font-weight: 600; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--yellow);
+      border-bottom: 1px solid currentColor; transition: color .3s;
+    }
+    .map-info a:hover { color: var(--yellow-deep); }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       FOOTER
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    footer { background: var(--ink); color: rgba(255,255,255,.35); padding: 3.5rem 5% 2rem; }
+    .footer-grid {
+      max-width: 1180px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem; padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+    .fb-name {
+      font-size: 1.5rem; font-weight: 800; color: var(--white); margin-bottom: .3rem;
+    }
+    .fb-name span { color: var(--yellow); }
+    .fb-tagline { font-size: .78rem; color: rgba(255,255,255,.3); margin-bottom: 1rem; }
+    .fb-desc { font-size: .82rem; line-height: 1.75; max-width: 260px; }
+    .fb-soc { display: flex; gap: .6rem; margin-top: 1.2rem; }
+    .fc h4 {
+      font-size: .68rem; font-weight: 600; letter-spacing: .2em;
+      text-transform: uppercase; color: rgba(255,255,255,.55);
+      margin-bottom: 1.1rem;
+    }
+    .fc ul li { margin-bottom: .55rem; }
+    .fc ul li a { font-size: .82rem; color: rgba(255,255,255,.35); transition: color .3s; }
+    .fc ul li a:hover { color: var(--yellow); }
+    .fc address { font-style: normal; font-size: .82rem; line-height: 1.9; }
+    .fc address a { color: rgba(255,255,255,.35); transition: color .3s; }
+    .fc address a:hover { color: var(--yellow); }
+    .footer-bottom {
+      max-width: 1180px; margin: 1.8rem auto 0;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem; font-size: .75rem;
+    }
+    .dev-credit { color: var(--yellow); }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       WHATSAPP FLOAT
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .wa-btn {
+      position: fixed; bottom: 2rem; right: 2rem; z-index: 9999;
+      width: 58px; height: 58px; border-radius: 50%;
+      background: #25D366;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 28px rgba(37,211,102,.5);
+      transition: transform .3s, box-shadow .3s;
+      text-decoration: none;
+    }
+    .wa-btn:hover {
+      transform: scale(1.12) translateY(-2px);
+      box-shadow: 0 12px 36px rgba(37,211,102,.55);
+    }
+    .wa-btn svg { width: 30px; height: 30px; fill: #fff; }
+    .wa-ring {
+      position: absolute; inset: -6px; border-radius: 50%;
+      border: 2px solid #25D366; opacity: 0;
+      animation: waPulse 2.5s infinite;
+    }
+    @keyframes waPulse {
+      0%   { transform: scale(1);   opacity: .6; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       TOAST
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .toast {
+      position: fixed; bottom: 5.8rem; right: 2rem; z-index: 9999;
+      background: var(--card-bg); color: var(--white);
+      padding: 1rem 1.5rem; border-radius: 8px;
+      font-size: .83rem;
+      transform: translateX(130%);
+      transition: transform .4s cubic-bezier(.16,1,.3,1);
+      box-shadow: 0 8px 32px rgba(0,0,0,.5);
+      border-left: 3px solid var(--yellow);
+    }
+    .toast.show { transform: translateX(0); }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       SCROLL REVEAL
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    .reveal {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       RESPONSIVE
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+    @media (max-width: 1024px) {
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-img-float { display: none; }
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .cards-3d { grid-template-columns: 1fr 1fr; }
+      .map-info { right: 3%; max-width: 220px; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .ham { display: flex; }
+      .topbar { font-size: .65rem; padding: .5rem 3%; }
+      .hero-btns { flex-direction: column; align-items: flex-start; }
+      .cards-3d { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      #mapbox { height: auto; }
+      #mapbox iframe { height: 260px; }
+      .map-info { position: static; transform: none; margin: 0 1rem; max-width: 100%; }
+      .form-row { grid-template-columns: 1fr; }
+      .stats-inner { gap: .8rem; }
+    }
+    @media (max-width: 480px) {
+      .section { padding: 4rem 4%; }
+      .booking-form { padding: 1.8rem 1.2rem; }
+      .hero-content { padding: 6rem 4% 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    🕙 Open Daily 11:00 AM – 3:00 AM &nbsp;|&nbsp;
+    Emirates Mall, Model Town, Multan &nbsp;|&nbsp;
+    <a href="tel:+923016394444">0301-6394444</a> &nbsp;·&nbsp;
+    <a href="tel:111919191">111-91-91-91</a>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <div class="logo-box">🍔</div>
+      <div>
+        <div class="logo-text">Din<span>eo</span></div>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://dineo.pk/" target="_blank" rel="noopener" class="nav-order">Order Now 🚀</a></li>
+    </ul>
+    <button class="ham" id="hamBtn"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mob-nav" id="mobNav">
+    <button class="mob-close" id="mobClose">✕</button>
+    <a href="#hero"      onclick="closeMob()">Home</a>
+    <a href="#about"     onclick="closeMob()">About</a>
+    <a href="#menu"      onclick="closeMob()">Menu</a>
+    <a href="#services"  onclick="closeMob()">Services</a>
+    <a href="#contact"   onclick="closeMob()">Contact</a>
+    <a href="https://dineo.pk/" target="_blank" rel="noopener" style="color:var(--yellow)">Order Online</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-dots"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-badge"><span class="dot"></span>Now Open · Multan's Favourite Café</div>
+      <h1 class="hero-title">
+        <span class="w1">Where Taste</span>
+        <span class="w2">Meets Comfort</span>
+        <span class="w3">Every Bite. 🍔</span>
+      </h1>
+      <p class="hero-desc">
+        Burgers, wraps, loaded fries, shakes, and so much more — all made fresh and served fast at Dineo Fast Food & Cafe Lounge in the heart of Multan. Whether it's a quick lunch or a late-night hangout, we've got your table ready.
+      </p>
+      <div class="hero-btns">
+        <a href="https://dineo.pk/" target="_blank" rel="noopener" class="btn btn-yellow">🚀 Order Now</a>
+        <a href="#menu" class="btn btn-outline">📜 View Menu</a>
+        <a href="https://wa.me/923016394444?text=Hello%20Dineo!%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn btn-wa">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          WhatsApp Us
+        </a>
+        <a href="#contact" class="btn btn-white">📅 Book Table</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><span class="ti">⏱️</span> Open till 3 AM</div>
+        <div class="trust-item"><span class="ti">🚗</span> Free Parking</div>
+        <div class="trust-item"><span class="ti">🛵</span> Online Delivery</div>
+        <div class="trust-item"><span class="ti">📍</span> Emirates Mall, Multan</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div class="stats-strip reveal">
+    <div class="stats-inner">
+      <div class="stat"><div class="stat-num">4.7★</div><div class="stat-label">Google Rating</div></div>
+      <div class="stat"><div class="stat-num">5K+</div><div class="stat-label">Happy Customers</div></div>
+      <div class="stat"><div class="stat-num">40+</div><div class="stat-label">Menu Items</div></div>
+      <div class="stat"><div class="stat-num">16h</div><div class="stat-label">Open Daily</div></div>
+      <div class="stat"><div class="stat-num">🏆</div><div class="stat-label">Multan's Top Café</div></div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images reveal">
+          <div class="about-yellow-bar"></div>
+          <img class="about-img-main"
+            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&q=80"
+            alt="Dineo Cafe Lounge interior" loading="lazy"/>
+          <img class="about-img-float"
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80"
+            alt="Dineo Burger" loading="lazy"/>
+        </div>
+        <div class="about-text reveal">
+          <p class="eyebrow">About Dineo</p>
+          <h2 class="section-title">Multan's Go-To Spot for<br><span class="accent">Good Food & Good Vibes</span></h2>
+          <p>Dineo Fast Food & Cafe Lounge started with one simple idea — <strong>great food shouldn't be complicated</strong>. We wanted a place in Multan where you could walk in hungry and leave genuinely satisfied, whether it's a solo lunch, a family dinner, or a late-night hangout with friends.</p>
+          <p>We're located inside <strong>Emirates Mall, Model Town</strong> — easy to find, easy to get to, and open almost every hour that matters. From crispy burgers to creamy shakes, desi handi to cafe-style pasta, our menu is built to cover all cravings without making you think too hard.</p>
+          <p>Everything is made fresh. We don't cut corners on ingredients, and our kitchen takes real pride in what comes out of it. That's why our customers keep coming back — <strong>and why Multan knows the name Dineo</strong>.</p>
+          <div class="about-tags">
+            <span class="tag">🍔 Fast Food</span>
+            <span class="tag">☕ Café Lounge</span>
+            <span class="tag">🍕 Pizza</span>
+            <span class="tag">🥤 Shakes</span>
+            <span class="tag">🛵 Home Delivery</span>
+            <span class="tag">🌙 Late Night</span>
+          </div>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
+            <a href="https://dineo.pk/" target="_blank" rel="noopener" class="btn btn-yellow">Order Online</a>
+            <a href="#menu" class="btn btn-outline">View Menu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="section" id="menu">
+    <div class="container">
+      <div class="menu-header reveal">
+        <p class="eyebrow">Our Menu</p>
+        <h2 class="section-title">Fresh Food,<br><span class="accent">Made Your Way</span></h2>
+        <p>From classic burgers to chai-time snacks — our menu has something for everyone, every hour.</p>
+      </div>
+
+      <div class="menu-tabs">
+        <button class="tab active" onclick="switchTab('burgers')">Burgers</button>
+        <button class="tab" onclick="switchTab('cafe')">Café & Drinks</button>
+        <button class="tab" onclick="switchTab('pizza')">Pizza & Wraps</button>
+        <button class="tab" onclick="switchTab('desi')">Desi Deals</button>
+        <button class="tab" onclick="switchTab('desserts')">Desserts</button>
+      </div>
+
+      <!-- BURGERS -->
+      <div class="menu-panel active" id="burgers">
+        <div class="menu-grid">
+          <div class="menu-card reveal">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=75" alt="Classic Burger" loading="lazy">
+              <span class="card-badge">Best Seller</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="card-name">Dineo Classic Burger</div>
+              <div class="card-desc">Double patty, fresh lettuce, tomato, pickles, our signature sauce. The one everyone orders first.</div>
+              <div class="card-footer"><span class="card-price">Rs. 590</span><button class="card-add" onclick="addItem()">+</button></div>
+            </div>
+          </div>
+          <div class="menu-card reveal">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1586816001966-79b736744398?w=600&q=75" alt="Crispy Chicken Burger" loading="lazy">
+              <span class="card-badge new">New</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="card-name">Crispy Chicken Burger</div>
+              <div class="card-desc">Thick crispy fried chicken fillet, coleslaw, jalapeños, cheese slice, and garlic mayo in a toasted bun.</div>
+              <div class="card-footer"><span class="card-price">Rs. 650</span><button class="card-add" onclick="addItem()">+</button></div>
+            </div>
+          </div>
+          <div class="menu-card reveal">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=600&q=75" alt="BBQ Smash Burger" loading="lazy">
+            </div>
+            <div class="menu-card-body">
+              <div class="card-name">BBQ Smash Burger</div>
+              <div class="card-desc">Smashed beef patty, caramelized onions, BBQ drizzle, cheddar melt, lettuce. Messy in the best way.</div>
+              <div class="card-footer"><span class="card-price">Rs. 720</span><button class="card-add" onclick="addItem()">+</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CAFÉ -->
+      <div class="menu-panel" id="cafe">
+        <div class="menu-grid">
+          <div class="menu-card reveal">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&q=75" alt="Iced Latte" loading="lazy">
+              <span class="card-badge">Popular</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="card-name">Iced Caramel Latte</div>
+              <div class="card-desc">Smooth espresso, cold milk, caramel drizzle, over ice. The kind of drink that goes with everything.</div>
+              <div class="card-footer"><span class="card-price">Rs. 380</span><button class="card-add" onclick="addItem()">+</button></div>
+            </div>
+          </div>
+          <div class="menu-card reveal">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&q=75" alt="Chocolate Shake" loading="lazy">
+            </div>
+            <div class="menu-card-body">
+              <div class="card-name">Thick Chocolate Shake</div>
+              <div class="card-desc">Real chocolate blended with ice cream and milk, topped with whipped cream. Thick, rich, and very satisfying.</div>
+              <div class="card-footer"><span class="card-price">Rs. 420</span><button class="card-add" onclick="addItem()">+</button></div>
+            </div>
+          </div>
+          <div class="menu-card reveal">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=600&q=75" alt="Chai" loading="lazy">
+            </div>
+            <div class="menu-card-body">
+              <div class="card-name">Doodh Patti Chai</div>
+              <div class="card-desc">Made fresh with full-cream milk and loose leaf tea the way it's supposed to be — strong and slightly sweet.</div>
+              <div class="card-footer"><span class="card-price">Rs. 120</span><button class="card-add" onclick="addItem()">+</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PIZZA & WRAPS -->
+      <div class="menu-panel" id="pizza">
+        <div class="menu-grid">
+          <div class="menu-card reveal">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=75" alt="Chicken Pizza" loading="lazy">
+              <span class="card-badge">Hot Pick</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="card-name">Dineo Chicken Pizza</div>
+              <div class="card-desc">Hand-stretched base, homemade tomato sauce, grilled chicken, capsicum, mozzarella, and a hit of chilli flakes.</div>
+              <div class="card-footer"><span class="card-price">Rs. 990</span><button class="card-add" onclick="addItem()">+</button></div>
+            </div>
+          </div>
+          <div class="menu-card reveal">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&q=75" alt="Club Wrap" loading="lazy">
+            </div>
+            <div class="menu-card-body">
+              <div class="card-name">Crispy Chicken Club Wrap</div>
+              <div class="card-desc">Fried chicken strips, fresh veggies, cheddar, ranch sauce — wrapped tight in a warm tortilla. Simple and very good.</div>
+              <div class="card-footer"><span class="card-price">Rs. 550</span><button class="card-add" onclick="addItem()">+</button></div>
+            </div>
+          </div>
+          <div class="menu-card reveal">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=600&q=75" alt="Loaded Fries" loading="lazy">
+            </div>
+            <div class="menu-card-body">
+              <div class="card-name">Loaded Cheese Fries</div>
+              <div class="card-desc">Crispy fries piled high with melted cheese sauce, chicken chunks, jalapeños, and a drizzle of our chilli sauce.</div>
+              <div class="card-footer"><span class="card-price">Rs. 480</span><button class="card-add" onclick="addItem()">+</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESI -->
+      <div class="menu-panel" id="desi">
+        <div class="menu-grid">
+          <div class="menu-card reveal">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1631452180539-96aca7d48617?w=600&q=75" alt="Chicken Karahi" loading="lazy">
+              <span class="card-badge">Desi Fav</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="card-name">Chicken Karahi</div>
+              <div class="card-desc">Tender chicken cooked in a desi karahi with ginger, green chilli, tomatoes, and fresh coriander. Served with naan.</div>
+              <div class="card-footer"><span class="card-price">Rs. 1,100</span><button class="card-add" onclick="addItem()">+</button></div>
+            </div>
+          </div>
+          <div class="menu-card reveal">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=75" alt="Biryani" loading="lazy">
+            </div>
+            <div class="menu-card-body">
+              <div class="card-name">Special Biryani</div>
+              <div class="card-desc">Fragrant basmati rice, slow-cooked spiced meat, fried onions, and mint — the kind of biryani that reminds you of home.</div>
+              <div class="card-footer"><span class="card-price">Rs. 850</span><button class="card-add" onclick="addItem()">+</button></div>
+            </div>
+          </div>
+          <div class="menu-card reveal">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&q=75" alt="BBQ Platter" loading="lazy">
+            </div>
+            <div class="menu-card-body">
+              <div class="card-name">BBQ Platter</div>
+              <div class="card-desc">Mixed grill platter — seekh kabab, chicken boti, tikka, served with raita, salad, and fresh naan. Great for sharing.</div>
+              <div class="card-footer"><span class="card-price">Rs. 1,600</span><button class="card-add" onclick="addItem()">+</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESSERTS -->
+      <div class="menu-panel" id="desserts">
+        <div class="menu-grid">
+          <div class="menu-card reveal">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&q=75" alt="Sundae" loading="lazy">
+              <span class="card-badge">Sweet Treat</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="card-name">Nutella Sundae</div>
+              <div class="card-desc">Soft serve vanilla ice cream, warm Nutella drizzle, crushed biscuits, and whipped cream on top. Dangerously good.</div>
+              <div class="card-footer"><span class="card-price">Rs. 390</span><button class="card-add" onclick="addItem()">+</button></div>
+            </div>
+          </div>
+          <div class="menu-card reveal">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?w=600&q=75" alt="Waffle" loading="lazy">
+            </div>
+            <div class="menu-card-body">
+              <div class="card-name">Belgian Waffle</div>
+              <div class="card-desc">Crispy-on-outside, fluffy-on-inside waffle with maple syrup, cream, and seasonal fruit. A café classic done right.</div>
+              <div class="card-footer"><span class="card-price">Rs. 450</span><button class="card-add" onclick="addItem()">+</button></div>
+            </div>
+          </div>
+          <div class="menu-card reveal">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=75" alt="Cake" loading="lazy">
+            </div>
+            <div class="menu-card-body">
+              <div class="card-name">Red Velvet Cake Slice</div>
+              <div class="card-desc">A generous slice of moist red velvet with cream cheese frosting. The kind of dessert worth saving room for.</div>
+              <div class="card-footer"><span class="card-price">Rs. 320</span><button class="card-add" onclick="addItem()">+</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-cta reveal">
+        <a href="https://dineo.pk/" target="_blank" rel="noopener" class="btn btn-yellow">🚀 Full Menu & Online Ordering — dineo.pk</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3D EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="exp-header reveal">
+        <p class="eyebrow">Step Inside</p>
+        <h2 class="section-title">The <span class="accent">Dineo</span> Experience</h2>
+        <p>More than just food — it's the place you come back to. Late nights, celebrations, casual hangouts — Dineo sets the scene.</p>
+      </div>
+      <div class="scene">
+        <div class="cards-3d">
+          <div class="c3d reveal">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=700&q=80" alt="Cafe Vibe">
+            <div class="c3d-overlay">
+              <div class="c3d-title">The Lounge</div>
+              <div class="c3d-sub">Chill atmosphere, your kind of pace</div>
+            </div>
+          </div>
+          <div class="c3d reveal">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700&q=80" alt="Food">
+            <div class="c3d-overlay">
+              <div class="c3d-title">The Food</div>
+              <div class="c3d-sub">Fresh, flavourful, always hot</div>
+            </div>
+          </div>
+          <div class="c3d reveal">
+            <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=700&q=80" alt="Night Vibes">
+            <div class="c3d-overlay">
+              <div class="c3d-title">Night Mode</div>
+              <div class="c3d-sub">Open till 3 AM, whenever you need us</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="services-header reveal">
+        <p class="eyebrow">What We Do</p>
+        <h2 class="section-title">More Than a<br><span class="accent">Restaurant</span></h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <span class="s-icon">🍽️</span>
+          <h3>Dine-In</h3>
+          <p>A comfortable, air-conditioned cafe lounge inside Emirates Mall. Perfect for family outings, friend meetups, or date nights with the right vibe.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="s-icon">🛵</span>
+          <h3>Online Delivery</h3>
+          <p>Order directly at <strong style="color:var(--yellow)">dineo.pk</strong> and get your food delivered to your door. Available throughout Model Town and surrounding areas in Multan.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="s-icon">📦</span>
+          <h3>Takeaway</h3>
+          <p>In a rush? Call us or order online for curbside pickup. Your food will be ready, packed properly, and waiting when you arrive.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="s-icon">🎂</span>
+          <h3>Birthday & Events</h3>
+          <p>Planning a celebration? We can set up a section of the café for birthdays or small gatherings. Just let us know in advance and we'll handle it.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="s-icon">🌙</span>
+          <h3>Late-Night Bites</h3>
+          <p>We're open until 3 AM every day. Whether it's after a night out or you just had a late craving hit — Dineo is still going.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="s-icon">💼</span>
+          <h3>Corporate Lunch</h3>
+          <p>Need a clean, comfortable spot for a team lunch or meeting catch-up? Our café is well-located, calm, and the food won't disappoint anyone at the table.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER BANNER -->
+  <div class="offer-banner reveal">
+    <h2>🎉 Order Online, Save on Every Bite!</h2>
+    <p>Exclusive deals and combo offers only on <strong>dineo.pk</strong> — check our latest menu and order with just a few taps.</p>
+    <a href="https://dineo.pk/" target="_blank" rel="noopener" class="btn btn-white">🚀 Order on dineo.pk Now</a>
+  </div>
+
+  <!-- REVIEWS -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="reviews-header reveal">
+        <p class="eyebrow">What People Say</p>
+        <h2 class="section-title">Real People,<br><span class="accent">Real Opinions</span></h2>
+        <p>Don't take our word for it — Multan has already spoken.</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Hands down the best burger in Multan. The Crispy Chicken was perfectly done — not too spicy, not bland, and the bun was soft. Will keep coming back."</p>
+          <div class="review-author">— Ahsan R. · Google Review</div>
+        </div>
+        <div class="review-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Visited with family on a weekend night — the place was busy but service was still fast. The BBQ Platter was huge and genuinely good. Loved the café atmosphere too."</p>
+          <div class="review-author">— Saba T. · Facebook Review</div>
+        </div>
+        <div class="review-card reveal">
+          <div class="stars">★★★★☆</div>
+          <p class="review-text">"Perfect place for late-night hangouts. Open till 3 AM and still serving hot food. The loaded fries and chocolate shake combo is unbeatable. Location inside Emirates Mall is super convenient."</p>
+          <div class="review-author">— Usman K. · Google Review</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY STRIP -->
+  <div class="gallery-strip" style="padding:.5rem 0;">
+    <div class="strip-row" style="margin-bottom:.7rem;">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=480&q=70" alt="Burger" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=480&q=70" alt="Cafe" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=480&q=70" alt="Coffee" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=480&q=70" alt="Pizza" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=480&q=70" alt="Dessert" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=480&q=70" alt="Shake" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=480&q=70" alt="Burger" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=480&q=70" alt="Cafe" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=480&q=70" alt="Coffee" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=480&q=70" alt="Pizza" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=480&q=70" alt="Dessert" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=480&q=70" alt="Shake" loading="lazy">
+    </div>
+    <div class="strip-row reverse">
+      <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=480&q=70" alt="Fries" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=480&q=70" alt="Cake" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?w=480&q=70" alt="Waffle" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1586816001966-79b736744398?w=480&q=70" alt="Burger2" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1631452180539-96aca7d48617?w=480&q=70" alt="Karahi" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=480&q=70" alt="BBQ" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=480&q=70" alt="Fries" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=480&q=70" alt="Cake" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?w=480&q=70" alt="Waffle" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1586816001966-79b736744398?w=480&q=70" alt="Burger2" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1631452180539-96aca7d48617?w=480&q=70" alt="Karahi" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=480&q=70" alt="BBQ" loading="lazy">
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="eyebrow">Get In Touch</p>
+          <h2 class="section-title">Find Us, Call Us,<br><span class="accent">Or Just Show Up</span></h2>
+          <p>We're easy to reach and always ready. Walk in from Emirates Mall, call ahead, or order online — whichever works for you.</p>
+          <div class="ci-list">
+            <div class="ci">
+              <div class="ci-icon">📍</div>
+              <div class="ci-body">
+                <div class="ci-label">Address</div>
+                <a href="https://maps.app.goo.gl/T1KPbuBuVVF3kLsx6" target="_blank" rel="noopener">Emirates Mall, Model Town, Multan, 60000</a>
+              </div>
+            </div>
+            <div class="ci">
+              <div class="ci-icon">📞</div>
+              <div class="ci-body">
+                <div class="ci-label">Phone</div>
+                <a href="tel:+923016394444">+92 301-6394444</a><br>
+                <a href="tel:111919191">111-91-91-91</a>
+              </div>
+            </div>
+            <div class="ci">
+              <div class="ci-icon">🌐</div>
+              <div class="ci-body">
+                <div class="ci-label">Online Ordering</div>
+                <a href="https://dineo.pk/" target="_blank" rel="noopener">www.dineo.pk</a>
+              </div>
+            </div>
+            <div class="ci">
+              <div class="ci-icon">🕐</div>
+              <div class="ci-body">
+                <div class="ci-label">Opening Hours</div>
+                <span>Daily: 11:00 AM – 3:00 AM</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-social">
+            <a href="https://www.facebook.com/dineocafe/" target="_blank" rel="noopener" class="cs" title="Facebook">👍</a>
+            <a href="https://www.instagram.com/dineo_pk/" target="_blank" rel="noopener" class="cs" title="Instagram">📸</a>
+            <a href="https://wa.me/923016394444" target="_blank" rel="noopener" class="cs" title="WhatsApp">💬</a>
+            <a href="https://dineo.pk/" target="_blank" rel="noopener" class="cs" title="Website">🌐</a>
+            <a href="https://maps.app.goo.gl/T1KPbuBuVVF3kLsx6" target="_blank" rel="noopener" class="cs" title="Maps">🗺️</a>
+          </div>
+        </div>
+
+        <div class="booking-form reveal">
+          <h3>Book a Table</h3>
+          <div class="form-row">
+            <div class="fg"><label>Your Name</label><input type="text" id="fn" placeholder="Full name"/></div>
+            <div class="fg"><label>Phone Number</label><input type="tel" id="ph" placeholder="+92 ..."/></div>
+          </div>
+          <div class="form-row">
+            <div class="fg">
+              <label>Number of Guests</label>
+              <select id="gs">
+                <option>1 – 2 Guests</option>
+                <option selected>3 – 4 Guests</option>
+                <option>5 – 6 Guests</option>
+                <option>7 – 10 Guests</option>
+                <option>10+ (Private Event)</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Preferred Date</label>
+              <input type="date" id="dt"/>
+            </div>
+          </div>
+          <div class="fg">
+            <label>Preferred Time</label>
+            <select id="tm">
+              <option>12:00 PM</option>
+              <option>2:00 PM</option>
+              <option>5:00 PM</option>
+              <option>7:00 PM</option>
+              <option>8:00 PM</option>
+              <option>9:00 PM</option>
+              <option>10:00 PM</option>
+              <option>11:00 PM</option>
+              <option>12:00 AM (Midnight)</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Any Special Requests?</label>
+            <textarea id="sr" placeholder="Birthday celebration, dietary needs, seating preference..."></textarea>
+          </div>
+          <button class="form-btn" onclick="submitForm()">Confirm Reservation</button>
+          <p style="text-align:center; font-size:.74rem; color:rgba(255,255,255,.3); margin-top:1rem;">
+            Or call: <a href="tel:+923016394444" style="color:var(--yellow); font-weight:600">0301-6394444</a> /
+            <a href="tel:111919191" style="color:var(--yellow); font-weight:600">111-91-91-91</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <div id="mapbox">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3472.4!2d71.5249!3d30.1575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b35beaaaaaaab%3A0x456789!2sDineo%20Fast%20Food%20%26%20Cafe%20Lounge!5e0!3m2!1sen!2spk!4v1"
+      allowfullscreen="" loading="lazy"
+      title="Dineo Fast Food & Cafe Lounge Location — Emirates Mall, Multan">
+    </iframe>
+    <div class="map-info">
+      <h4>Dineo 🍔 Multan</h4>
+      <p>Emirates Mall, Model Town<br>Multan, 60000, Pakistan<br><br>📞 0301-6394444<br>🕙 11 AM – 3 AM Daily</p>
+      <a href="https://maps.app.goo.gl/T1KPbuBuVVF3kLsx6" target="_blank" rel="noopener">Get Directions →</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="fb-name">Din<span>eo</span> 🍔</div>
+        <p class="fb-tagline">Where Taste Meets Comfort</p>
+        <p class="fb-desc">Multan's favourite fast food café and lounge. Great food, great vibes, open till 3 AM every day. Find us at Emirates Mall, Model Town.</p>
+        <div class="fb-soc">
+          <a href="https://www.facebook.com/dineocafe/" target="_blank" rel="noopener" class="cs" title="Facebook">👍</a>
+          <a href="https://www.instagram.com/dineo_pk/" target="_blank" rel="noopener" class="cs" title="Instagram">📸</a>
+          <a href="https://wa.me/923016394444" target="_blank" rel="noopener" class="cs" title="WhatsApp">💬</a>
+          <a href="https://dineo.pk/" target="_blank" rel="noopener" class="cs" title="Website">🌐</a>
+        </div>
+      </div>
+      <div class="fc">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://dineo.pk/" target="_blank">Order Online</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Hours</h4>
+        <ul>
+          <li><a>Monday – Sunday</a></li>
+          <li><a>11:00 AM – 3:00 AM</a></li>
+          <li><a style="color:rgba(255,255,255,.2)">Open 7 days a week</a></li>
+          <li><a>Kitchen open all hours</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Contact</h4>
+        <address>
+          Emirates Mall<br>
+          Model Town, Multan<br>
+          60000, Pakistan<br><br>
+          <a href="tel:+923016394444">+92 301-6394444</a><br>
+          <a href="tel:111919191">111-91-91-91</a><br>
+          <a href="https://dineo.pk/" target="_blank">dineo.pk</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Dineo Fast Food & Cafe Lounge, Multan. All Rights Reserved.</span>
+      <span class="dev-credit">Designed &amp; Developed by <strong>Haseeb Mazhar</strong></span>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/923016394444?text=Hello%20Dineo!%20I%27d%20like%20to%20place%20an%20order%20or%20make%20a%20reservation." target="_blank" rel="noopener" class="wa-btn" title="Chat on WhatsApp">
+    <div class="wa-ring"></div>
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <!-- TOAST -->
+  <div class="toast" id="toastMsg">✅ Reservation request sent! We'll confirm shortly on WhatsApp.</div>
+
+  <script>
+    /* ─── Navbar scroll ─── */
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50));
+
+    /* ─── Mobile nav ─── */
+    const hamBtn  = document.getElementById('hamBtn');
+    const mobNav  = document.getElementById('mobNav');
+    const mobClose = document.getElementById('mobClose');
+    hamBtn.addEventListener('click', () => {
+      hamBtn.classList.toggle('open');
+      mobNav.classList.toggle('open');
+      document.body.style.overflow = mobNav.classList.contains('open') ? 'hidden' : '';
+    });
+    mobClose.addEventListener('click', closeMob);
+    function closeMob() {
+      hamBtn.classList.remove('open');
+      mobNav.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    /* ─── Menu tabs ─── */
+    function switchTab(id) {
+      document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    /* ─── Add to cart toast ─── */
+    function addItem() {
+      const t = document.getElementById('toastMsg');
+      t.textContent = '🛒 Item added! Complete your order at dineo.pk';
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3500);
+    }
+
+    /* ─── Booking form ─── */
+    function submitForm() {
+      const name = document.getElementById('fn').value.trim();
+      const phone = document.getElementById('ph').value.trim();
+      const date  = document.getElementById('dt').value;
+      if (!name || !phone || !date) {
+        alert('Please fill in your name, phone number, and preferred date to confirm the reservation.');
+        return;
+      }
+      const t = document.getElementById('toastMsg');
+      t.textContent = '✅ Reservation request sent! We\'ll confirm shortly on WhatsApp.';
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 5000);
+    }
+
+    /* ─── Set min date ─── */
+    const di = document.getElementById('dt');
+    if (di) di.setAttribute('min', new Date().toISOString().split('T')[0]);
+
+    /* ─── Scroll reveal ─── */
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 55);
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => io.observe(el));
+
+    /* ─── 3D card tilt ─── */
+    document.querySelectorAll('.c3d').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = e.clientX - r.left - r.width / 2;
+        const y = e.clientY - r.top  - r.height / 2;
+        card.style.transform = `rotateX(${-(y/r.height)*16}deg) rotateY(${(x/r.width)*16}deg) translateZ(22px) scale(1.04)`;
+      });
+      card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+    });
+
+    /* ─── Counter animation ─── */
+    const countersObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          countersObserver.unobserve(e.target);
+          e.target.querySelectorAll('.stat-num').forEach(el => {
+            const orig = el.textContent;
+            const num = parseInt(orig);
+            if (!isNaN(num)) {
+              let c = 0;
+              const step = Math.ceil(num / 60);
+              const timer = setInterval(() => {
+                c = Math.min(c + step, num);
+                el.textContent = orig.replace(String(num), c);
+                if (c >= num) clearInterval(timer);
+              }, 25);
+            }
+          });
+        }
+      });
+    }, { threshold: 0.4 });
+    const strip = document.querySelector('.stats-strip');
+    if (strip) countersObserver.observe(strip);
+  </script>
+
+</body>
+</html>
